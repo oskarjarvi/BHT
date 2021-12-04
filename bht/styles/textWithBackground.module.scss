@@ -1,0 +1,26 @@
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding:80px;
+    h1 {
+        text-transform: uppercase;
+    }
+    .textWrapper {
+        margin-top: 30px;
+        background-color: #EFEFEF;
+        width: 100%;
+        max-width: 700px;
+        padding: 80px;
+        color: black;
+
+        .text {
+            text-align: center;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            word-wrap: break-word; 
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.heroContainer {
+    width: 100vw;
+    height:85vh;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    .heroText {
+        align-self: center;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 600;
+    }
+    .navLinkContainer{
+        z-index: 3000;
+        position:absolute;
+        bottom:80px;
+        display:flex;
+        width: 100%;
+        max-width: 850px;
+        justify-content: space-evenly;
+    }
+}
