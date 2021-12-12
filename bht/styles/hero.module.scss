@@ -1,5 +1,4 @@
 .heroContainer {
-    width: 100vw;
     height:85vh;
     display: flex;
     justify-content: center;
@@ -13,12 +12,20 @@
         font-weight: 600;
     }
     .navLinkContainer{
-        z-index: 3000;
+        z-index: 200;
         position:absolute;
-        bottom:80px;
         display:flex;
+        bottom:100px;
         width: 100%;
         max-width: 850px;
         justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: 600px) {
+        bottom:110px;
+        flex-direction: row;
+
+          }
     }
 }

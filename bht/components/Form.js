@@ -15,14 +15,19 @@ const Form = ({ blok }) => {
     };
     const submitForm = (e) => {
         e.preventDefault()
+
         emailjs.sendForm("service_zhi04ue", "template_1oawws5", e.target, "user_CkGezjRimf0X9SUnUERbP")
     }
 
     return (
-        <div {...sbEditable(blok)} className={styles.formContainer}>
+        <div {...sbEditable(blok)} className={styles.formContainer} style={{ backgroundImage: `url(${blok.backgroundImage.filename})` }}>
+            <h1>{blok.form_name}</h1>
+            <span className={styles.formDescription}>
+                {blok.formDescription}
+            </span>
             <form onSubmit={submitForm}>
                 {blok.fields.map((item, index) => <FormInput key={index} blok={item} value={values[item.name]} fieldChanged={fieldChanged} />)}
-                <button type="submit">Anmäl</button>
+                <button type="submit" className={styles.submitButton}>Anmäl</button>
             </form>
         </div>
     )

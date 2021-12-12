@@ -1,14 +1,17 @@
 import React from "react";
 import Image from 'next/image'
 import { sbEditable } from "@storyblok/storyblok-editable";
+import DynamicComponent from "./DynamicComponent";
+import styles from '../styles/courseList.module.scss'
 
 const CourseList = ({ blok }) => {
     let courseList = blok.list;
 
-    return <div {...sbEditable(blok)} >
-        {courseList.map((item, key) => <div key={key}>
-            {item.title}
-        </div>)}
+    return <div {...sbEditable(blok)} className={styles.courseListContainer}>
+        <div className={styles.courseListHeader}>
+            <h1>Kursutbud</h1>
+        </div>
+        {courseList.map((item, key) => <DynamicComponent key={key} blok={item} />)}
     </div>;
 };
 

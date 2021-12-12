@@ -19,7 +19,7 @@ const TextWithBackground = ({ blok }) => {
 
 
     return <div {...sbEditable(blok)} style={{ backgroundImage: `url(${blok.backgroundImage.filename})` }} className={styles.container}>
-        <h1>{blok.title}</h1>
+        {blok.title !== "" && <h1>{blok.title}</h1>}
         <div className={styles.textWrapper}>
             <pre className={styles.text}>
                 <RichTextField data={blok.textContent} />

@@ -54,7 +54,7 @@ export async function getStaticPaths() {
     let paths = [];
     Object.keys(data.links).forEach((linkKey) => {
         // don't create routes for folders and the index page
-        if (data.links[linkKey].is_folder || data.links[linkKey].slug === "home") {
+        if (data.links[linkKey].is_folder || data.links[linkKey].slug === "home" || data.links[linkKey].slug === "kurser") {
             return;
         }
 
