@@ -1,6 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['a.storyblok.com'],
+    domains: ["a.storyblok.com"],
   },
-}
+  target: "serverless",
+};
