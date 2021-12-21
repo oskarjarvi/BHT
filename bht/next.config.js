@@ -3,4 +3,7 @@ module.exports = {
   images: {
     domains: ["a.storyblok.com"],
   },
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
+  },
 };
