@@ -9,7 +9,6 @@ import NavigationLink from "./NavigationLink";
 import TextColourSection from "./TextColourSection";
 import TextWithBackground from "./TextWithBackground";
 import TextSection from "./TextSection";
-
 import EducationBlock from "./EducationBlock";
 import Grid from "./Grid";
 import TextGridColumn from "./TextGridColumn";

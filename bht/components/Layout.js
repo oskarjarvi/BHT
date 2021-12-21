@@ -1,5 +1,5 @@
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { useState, useEffect } from "react";
 import Storyblok, { useStoryblok } from "../lib/storyblok";
 
