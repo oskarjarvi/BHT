@@ -24,7 +24,7 @@
     "swiper": "^7.3.1"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^3.3.0",
+    "@netlify/plugin-nextjs": "^4.1.1",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.1"
   },
