@@ -91,6 +91,15 @@ const FormInput = ({ blok, value, fieldChanged }) => {
           menuPortalTarget={process.browser && document.body}
           styles={customStyles}
         />
+      ) : blok.type == "number" ? (
+        <input
+          type={"tel"}
+          id={blok._uid}
+          name={blok.name}
+          value={value}
+          placeholder={blok.placeholder}
+          onChange={(e) => fieldChanged(blok.name, e.target.value)}
+        />
       ) : (
         <input
           type={blok.type}

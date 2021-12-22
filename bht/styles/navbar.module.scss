@@ -11,6 +11,9 @@
 
   a {
     display: flex;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .navLogo {
     cursor: pointer;
@@ -52,7 +55,7 @@
         display: flex;
         position: absolute;
         flex-direction: column;
-        top: 69px;
+        top: 79px;
         margin: 0;
         padding: 10px 0 10px 10px;
 

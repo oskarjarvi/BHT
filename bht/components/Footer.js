@@ -23,7 +23,7 @@ export default function Footer({ data }) {
           <p>{content.address}</p>
         </div>
         <div>
-          <p>{content.tel}</p>
+          <p>Tel: {content.tel}</p>
           <p>{content.email}</p>
         </div>
         <div>
