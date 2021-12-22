@@ -38,7 +38,7 @@ export async function getStaticProps({ params, preview = false }) {
       story: data ? data.story : null,
       preview,
     },
-    revalidate: 300, // revalidate every hour
+    revalidate: 30, // revalidate every hour
   };
 }
 
