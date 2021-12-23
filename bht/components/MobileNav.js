@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/navbar.module.scss";
+import styles from "../styles/mobileNav.module.scss";
 import { NavLinks } from "./Navlinks";
 
 export const MobileNav = ({ filteredLinks, links, dropdowns }) => {
@@ -13,8 +13,8 @@ export const MobileNav = ({ filteredLinks, links, dropdowns }) => {
         <a>
           <Image
             src={"/navLogo.svg"}
-            width={150}
-            height={30}
+            width={100}
+            height={20}
             alt={"Bedas logo"}
             className={styles.navLogo}
             quality={100}

@@ -1,7 +1,9 @@
-.video {
-  height: auto;
+.videoContainer {
   width: 100%;
-  @media (min-width: 600px) {
-    height: 600px;
+  display: flex;
+  justify-content: center;
+  .video {
+    height: auto;
+    width: 100%;
   }
 }

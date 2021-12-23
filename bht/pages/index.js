@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
+
 // The Storyblok Client
 import { Storyblok, useStoryblok } from "../lib/storyblok";
 import DynamicComponent from "../components/DynamicComponent";

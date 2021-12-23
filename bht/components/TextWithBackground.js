@@ -3,8 +3,15 @@ import { sbEditable } from "@storyblok/storyblok-editable";
 import styles from "../styles/textWithBackground.module.scss";
 import { Storyblok } from "../lib/storyblok";
 import DynamicComponent from "./DynamicComponent";
+import { useSpring, animated } from "react-spring";
 
 const TextWithBackground = ({ blok }) => {
+  const imgProps = useSpring({
+    from: { transform: "scale(1)" },
+    to: { transform: "scale(1.2)" },
+    config: { duration: 10000 },
+  });
+
   function createMarkup(storyblokHTML) {
     return {
       __html: Storyblok.richTextResolver.render(storyblokHTML),
@@ -16,11 +23,14 @@ const TextWithBackground = ({ blok }) => {
   };
 
   return (
-    <div
-      {...sbEditable(blok)}
-      style={{ backgroundImage: `url(${blok.backgroundImage.filename})` }}
-      className={styles.container}
-    >
+    <div className={styles.container} {...sbEditable(blok)}>
+      <animated.div
+        style={{
+          ...imgProps,
+          backgroundImage: `url(${blok.backgroundImage.filename})`,
+        }}
+        className={styles.backgroundImage}
+      />
       {blok.title !== "" && <h1>{blok.title}</h1>}
       <div className={styles.textWrapper}>
         <pre className={styles.text}>

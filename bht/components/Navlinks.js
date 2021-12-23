@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/navbar.module.scss";
+import styles from "../styles/navLinks.module.scss";
 import useWindowSize from "../utils/hooks";
 import { NavLink } from "./NavLink";
 

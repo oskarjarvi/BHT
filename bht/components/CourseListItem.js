@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { sbEditable } from "@storyblok/storyblok-editable";
 import DynamicComponent from "./DynamicComponent";
 import styles from "../styles/courseList.module.scss";

@@ -1,42 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Open-Sans;
-  background-color: #E5E5E5;
+  font-family: "Open Sans", sans-serif;
+  background-color: #e5e5e5;
   h1 {
     font-weight: 600;
   }
   h2 {
     font-weight: 400;
+    font-size: 20px;
   }
   pre {
-    font-family: Open-Sans;
+    font-family: "Open Sans", sans-serif;
+    h1 {
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+    }
   }
   .swiper-button-prev {
-    color: white !important; 
-}
+    color: white !important;
+  }
 
-.swiper-button-next {
-    color: white !important; 
-}
-.swiper-pagination-bullet {
-  background: white;
-}
+  .swiper-button-next {
+    color: white !important;
+  }
+  .swiper-pagination-bullet {
+    background: white;
+  }
 
-  input, button, textarea, select {
-    font-family: Open-Sans;
-    background-color: #E5E5E5;
+  input,
+  button,
+  textarea,
+  select {
+    font-family: "Open Sans", sans-serif;
+    background-color: #e5e5e5;
   }
   @media (max-width: 600px) {
     font-size: 14px;
-    h1{
+    h1 {
       font-size: 16px;
     }
     h2 {
       font-size: 14px;
     }
-
   }
 }
 

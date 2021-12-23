@@ -12,7 +12,7 @@ const Hero = ({ blok }) => {
   const imgProps = useSpring({
     from: { transform: "scale(1)" },
     to: { transform: "scale(1.2)" },
-    config: { duration: 5000 },
+    config: { duration: 8000 },
   });
 
   const logoProps = useSpring({
@@ -39,7 +39,7 @@ const Hero = ({ blok }) => {
           <animated.div className={styles.logo} style={logoProps}>
             <Image
               src={blok.logo.filename}
-              alt={blok.alt}
+              alt={"logo"}
               layout={"fill"}
               quality={100}
               objectFit="cover"

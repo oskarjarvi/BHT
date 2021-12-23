@@ -1,0 +1,74 @@
+.navLink {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+}
+.active {
+  color: #ffd561;
+  text-decoration: underline;
+  text-decoration-color: #ffd561;
+}
+.dropdownToggle {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  width: 115px;
+
+  p {
+    margin: 0;
+  }
+  &::after {
+    display: inline-block;
+    content: "\25bc";
+    font-size: 10px;
+    margin-left: 5px;
+    color: white;
+  }
+  .visibleDropDown {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 79px;
+    margin: 0;
+    padding: 10px 0 10px 10px;
+    left: 0;
+    height: 200px;
+    transition: height 0.2s ease-in-out;
+    background-color: rgba(67, 100, 71, 0.5);
+    ul {
+      list-style: none;
+      padding-left: 0;
+      li {
+        text-transform: uppercase;
+        text-align: left;
+        cursor: pointer;
+        padding: 5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      height: auto;
+      padding: 0;
+    }
+  }
+  .dropdown {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  @media (max-width: 600px) {
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+  }
+}
+.visible {
+  &::after {
+    transform: rotate(180deg);
+  }
+}

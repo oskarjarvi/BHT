@@ -4,7 +4,7 @@ import styles from "../styles/videoBlock.module.scss";
 import { Wrapper } from "./Wrapper";
 const VideoBlock = ({ blok }) => {
   return (
-    <div {...sbEditable(blok)}>
+    <div {...sbEditable(blok)} className={styles.videoContainer}>
       <Wrapper>
         <video className={styles.video} controls>
           <source src={blok.video.filename} type={"video/mp4"} />

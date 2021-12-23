@@ -3,6 +3,7 @@ import { sbEditable } from "@storyblok/storyblok-editable";
 import styles from "../styles/text.module.scss";
 import { Storyblok } from "../lib/storyblok";
 import DynamicComponent from "./DynamicComponent";
+import { Wrapper } from "./Wrapper";
 
 const TextColourSection = ({ blok }) => {
   function createMarkup(storyblokHTML) {
@@ -17,16 +18,18 @@ const TextColourSection = ({ blok }) => {
 
   return (
     <div {...sbEditable(blok)} className={styles.textColourContainer}>
-      <div className={styles.textWrapper}>
-        <pre className={styles.text}>
-          <RichTextField data={blok.content} />
-        </pre>
-        {blok.link.length
-          ? blok.link.map((link, index) => (
-              <DynamicComponent key={index} blok={link} />
-            ))
-          : null}
-      </div>
+      <Wrapper>
+        <div className={styles.textWrapper}>
+          <pre className={styles.text}>
+            <RichTextField data={blok.content} />
+          </pre>
+          {blok.link.length
+            ? blok.link.map((link, index) => (
+                <DynamicComponent key={index} blok={link} />
+              ))
+            : null}
+        </div>
+      </Wrapper>
     </div>
   );
 };

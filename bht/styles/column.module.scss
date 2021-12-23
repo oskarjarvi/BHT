@@ -60,13 +60,13 @@
       }
     }
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 1200px) {
     flex-direction: row;
     .columnContainer {
       width: 50%;
       height: 600px;
       .textContainer {
-        padding: 80px;
+        padding: 40px 150px;
       }
     }
   }

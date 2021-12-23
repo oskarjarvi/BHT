@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "../styles/navbar.module.scss";
+import styles from "../styles/navLinks.module.scss";
 import useWindowSize from "../utils/hooks";
 import { useState } from "react";
 
@@ -20,7 +20,7 @@ export const NavLink = ({ children, href, name, slug }) => {
     return (
       <div
         onClick={() => setDropdownVisisble(!dropdownVisible)}
-        className={`${styles.dropdownToggle} ${
+        className={`${styles.navLink} ${styles.dropdownToggle} ${
           dropdownVisible ? styles.visible : ""
         }`}
       >

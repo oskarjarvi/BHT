@@ -12,8 +12,8 @@
   justify-items: center;
   .footerLogo {
     position: relative;
-    width: 150px;
-    height: 50px;
+    width: 200px;
+    height: 70px;
   }
   p {
     text-align: start;
@@ -28,7 +28,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   @media (min-width: 900px) {
-    height: 260px;
+    height: 226px;
     grid-template-columns: repeat(4, 1fr);
   }
 }

@@ -8,6 +8,7 @@
   color: white;
 
   h1 {
+    margin-top: 0;
     text-transform: uppercase;
   }
   .gridContainer {
@@ -28,16 +29,19 @@
     }
   }
   @media (min-width: 600px) {
-    padding: 110px 0;
+    height: 600px;
+    padding: 50px 0;
     .gridContainer {
       grid-gap: 35px;
-      grid-template-rows: repeat(auto-fill, minmax(200px, 250px));
+      grid-template-rows: repeat(auto-fill, minmax(200px, 350px));
       grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
       justify-content: center;
     }
   }
   @media (min-width: 1200px) {
-    padding: 110px 0;
+    height: 600px;
+
+    padding: 50px 0;
     .gridContainer {
       grid-gap: 35px;
       grid-template-rows: repeat(auto-fill, minmax(200px, 300px));

@@ -11,8 +11,8 @@ export const DesktopNav = ({ filteredLinks, links, dropdowns }) => {
         <a>
           <Image
             src={"/navLogo.svg"}
-            width={150}
-            height={30}
+            width={110}
+            height={20}
             alt={"Bedas logo"}
             className={styles.navLogo}
             quality={100}
