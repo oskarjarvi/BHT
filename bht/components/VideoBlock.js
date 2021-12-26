@@ -6,7 +6,7 @@ const VideoBlock = ({ blok }) => {
   return (
     <div {...sbEditable(blok)} className={styles.videoContainer}>
       <Wrapper>
-        <video className={styles.video} controls>
+        <video className={styles.video} controls preload="none">
           <source src={blok.video.filename} type={"video/mp4"} />
         </video>
       </Wrapper>
