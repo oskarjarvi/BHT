@@ -23,7 +23,7 @@ const ImageList = ({ blok }) => {
         title ? styles.imageListContainer : styles.imageListContainerNoPadding
       }
     >
-      {title ? <h1>{title}</h1> : null}
+      {title ? <h2>{title}</h2> : null}
       {blok.imageList.length ? (
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}

@@ -6,7 +6,7 @@ import { Wrapper } from "./Wrapper";
 const Grid = ({ blok }) => {
   return (
     <div {...sbEditable(blok)} className={styles.wrapper}>
-      <h1>{blok.title}</h1>
+      <h2>{blok.title}</h2>
       <Wrapper>
         <div className={styles.gridContainer}>
           {blok.columns.map((item, index) => (

@@ -17,7 +17,7 @@ const TextColumn = ({ blok }) => {
   };
   return (
     <div {...sbEditable(blok)} className={styles.textContainer}>
-      <h1>{blok.columnTitle}</h1>
+      <h2>{blok.columnTitle}</h2>
       <div>
         <RichTextField data={blok.textContent} />
       </div>
