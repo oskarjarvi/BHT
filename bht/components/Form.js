@@ -30,7 +30,7 @@ const Form = ({ blok }) => {
       className={styles.formContainer}
       style={{ backgroundImage: `url(${blok.backgroundImage.filename})` }}
     >
-      <h1>{blok.form_name}</h1>
+      <h2>{blok.form_name}</h2>
       <span className={styles.formDescription}>{blok.formDescription}</span>
       <form onSubmit={submitForm}>
         {blok.fields.map((item, index) => (

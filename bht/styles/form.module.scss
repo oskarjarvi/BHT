@@ -5,6 +5,9 @@
 
   color: white;
   padding: 150px 0;
+  h2 {
+    text-transform: uppercase;
+  }
   .formDescription {
     width: 100%;
     max-width: 900px;
@@ -42,7 +45,7 @@
     }
     .submitButton {
       width: 172px;
-      height: 75px;
+      height: 62px;
       background-color: #ffd561;
       align-self: flex-end;
       border: none;
@@ -50,7 +53,7 @@
       font-size: 18px;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     padding: 150px 20px;
   }
 }

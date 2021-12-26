@@ -16,8 +16,7 @@
   cursor: pointer;
   align-items: center;
   width: 115px;
-
-  p {
+  padding: 1.2rem 0px p {
     margin: 0;
   }
   &::after {
@@ -55,6 +54,7 @@
     @media (max-width: 600px) {
       height: auto;
       padding: 0;
+      top: 54px;
     }
   }
   .dropdown {

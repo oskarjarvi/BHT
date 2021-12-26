@@ -8,7 +8,7 @@ const EducationBlock = ({ blok }) => {
   return (
     <div {...sbEditable(blok)} className={styles.educationsContainer}>
       <div className={styles.container}>
-        <h1>{blok.title}</h1>
+        <h2>{blok.title}</h2>
         <pre>{blok.educationList}</pre>
         <div className={styles.certImagesContainer}>
           {blok.certImages.length &&

@@ -1,5 +1,5 @@
 .footerContainer {
-  padding: 1.25rem;
+  padding: 1.25rem 100px;
   color: white;
   background-color: #436447;
   display: grid;
@@ -21,7 +21,7 @@
   pre {
     text-align: center;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 650px) {
     row-gap: 10px;
     column-gap: 10px;
     grid-template-columns: repeat(2, 1fr);
@@ -33,7 +33,7 @@
       text-align: start;
     }
   }
-  @media (min-width: 900px) {
+  @media (min-width: 950px) {
     height: 200px;
     grid-template-columns: repeat(4, 1fr);
     p {

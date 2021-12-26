@@ -24,7 +24,7 @@ export default function Navbar({ children, links }) {
 
   return (
     <nav className={styles.navbar}>
-      {size.width > 768 ? (
+      {size.width > 970 ? (
         <DesktopNav
           links={links}
           dropdowns={dropdownItems}

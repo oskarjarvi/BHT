@@ -5,7 +5,7 @@
   width: 100%;
   height: auto;
   background-color: #436447;
-  padding: 80px;
+  padding: 60px 80px;
   .textWrapper {
     display: flex;
     justify-content: center;
@@ -18,8 +18,9 @@
       white-space: -moz-pre-wrap; /* Mozilla */
       word-wrap: break-word; /* Internet Explorer 5.5+ */
       margin-bottom: 50px;
-      h2 {
+      h3 {
         margin: 0;
+        font-weight: 400;
       }
     }
   }
@@ -41,8 +42,7 @@
   width: 100%;
   height: auto;
   background-color: #e5e5e5;
-
-  padding: 80px;
+  padding: 60px 80px;
   .textWrapper {
     display: flex;
     justify-content: center;
