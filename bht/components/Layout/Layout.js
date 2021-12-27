@@ -1,7 +1,7 @@
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/Footer";
 import { useState, useEffect } from "react";
-import Storyblok, { useStoryblok } from "../lib/storyblok";
+import Storyblok, { useStoryblok } from "../../lib/storyblok";
 
 export default function Layout({ children }) {
   const [dataLinks, setDataLinks] = useState([]);

@@ -1,9 +1,8 @@
 import React from "react";
-import DynamicComponent from "./DynamicComponent";
 import { sbEditable } from "@storyblok/storyblok-editable";
 
-import styles from "../styles/column.module.scss";
-import { Storyblok } from "../lib/storyblok";
+import styles from "../../styles/column.module.scss";
+import { Storyblok } from "../../lib/storyblok";
 
 const TextColumn = ({ blok }) => {
   function createMarkup(storyblokHTML) {

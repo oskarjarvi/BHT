@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: column;
   background: #436447;
-  height: 100vh;
+  height: 110vh;
   text-align: left;
   padding: 4rem 2rem;
   position: absolute;
@@ -61,42 +61,42 @@
     text-decoration: none;
     transition: color 0.3s linear;
   }
-  .dropdownToggle {
-    display: flex;
-    font-size: 1rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: #efefef;
-    text-decoration: none;
-    transition: color 0.3s linear;
-    position: relative;
-    .dropdown {
-      height: 0;
-      width: 0;
-      overflow: hidden;
-    }
-    .visibleDropDown {
-      display: flex;
-      position: absolute;
-      flex-direction: column;
-      margin: 0;
-      padding: 10px 0 10px 10px;
-      left: 0;
-      height: 200px;
-      transition: height 0.2s ease-in-out;
-      background-color: rgba(67, 100, 71, 0.5);
-      ul {
-        list-style: none;
-        padding-left: 0;
-        li {
-          margin: 0;
-          text-decoration: none;
-        }
-      }
-    }
-  }
+  // .dropdownToggle {
+  //   display: flex;
+  //   font-size: 1rem;
+  //   text-transform: uppercase;
+  //   padding: 2rem 0;
+  //   font-weight: bold;
+  //   letter-spacing: 0.5rem;
+  //   color: #efefef;
+  //   text-decoration: none;
+  //   transition: color 0.3s linear;
+  //   position: relative;
+  //   .dropdown {
+  //     height: 0;
+  //     width: 0;
+  //     overflow: hidden;
+  //   }
+  //   .visibleDropDown {
+  //     display: flex;
+  //     position: absolute;
+  //     flex-direction: column;
+  //     margin: 0;
+  //     padding: 10px 0 10px 10px;
+  //     left: 0;
+  //     height: 200px;
+  //     transition: height 0.2s ease-in-out;
+  //     background-color: rgba(67, 100, 71, 0.5);
+  //     ul {
+  //       list-style: none;
+  //       padding-left: 0;
+  //       li {
+  //         margin: 0;
+  //         text-decoration: none;
+  //       }
+  //     }
+  //   }
+  // }
 }
 .open {
   transform: translateX(0);

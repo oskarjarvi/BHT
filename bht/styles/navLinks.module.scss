@@ -16,8 +16,19 @@
   cursor: pointer;
   align-items: center;
   width: 115px;
-  padding: 1.2rem 0px p {
+  padding: 1.2rem 0px;
+  p {
     margin: 0;
+    @media (max-width: 950px) {
+      font-size: 1rem;
+      text-transform: uppercase;
+      padding: 1.5rem 0;
+      font-weight: bold;
+      letter-spacing: 0.5rem;
+      color: #efefef;
+      text-decoration: none;
+      transition: color 0.3s linear;
+    }
   }
   &::after {
     display: inline-block;
@@ -30,7 +41,7 @@
     display: flex;
     position: absolute;
     flex-direction: column;
-    top: 79px;
+    top: 100%;
     margin: 0;
     padding: 10px 0 10px 10px;
     left: 0;

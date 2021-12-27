@@ -1,9 +1,9 @@
 import React from "react";
-import DynamicComponent from "./DynamicComponent";
+import DynamicComponent from "../DynamicComponent";
 import { sbEditable } from "@storyblok/storyblok-editable";
 import Image from "next/image";
-import styles from "../styles/column.module.scss";
-import { Storyblok } from "../lib/storyblok";
+import styles from "../../styles/column.module.scss";
+import { Storyblok } from "../../lib/storyblok";
 
 const ImageColumn = ({ blok }) => {
   return (

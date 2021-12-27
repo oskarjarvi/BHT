@@ -1,10 +1,11 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import styles from "../styles/navbar.module.scss";
-import useWindowSize from "../utils/hooks";
+import styles from "../../../styles/navbar.module.scss";
+
 import { NavLinks } from "./Navlinks";
 import { DesktopNav } from "./DesktopNav";
 import { MobileNav } from "./MobileNav";
+import useWindowSize from "../../../utils/hooks";
 
 export default function Navbar({ children, links }) {
   const size = useWindowSize();

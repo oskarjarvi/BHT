@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { sbEditable } from "@storyblok/storyblok-editable";
-import styles from "../styles/form.module.scss";
-import Storyblok, { useStoryblok } from "../lib/storyblok";
+import styles from "../../styles/form.module.scss";
+import Storyblok, { useStoryblok } from "../../lib/storyblok";
 import Select from "react-select";
 
 const FormInput = ({ blok, value, fieldChanged }) => {
@@ -90,6 +90,7 @@ const FormInput = ({ blok, value, fieldChanged }) => {
           isClearable
           menuPortalTarget={process.browser && document.body}
           styles={customStyles}
+          required={true}
         />
       ) : blok.type == "number" ? (
         <input
@@ -97,6 +98,7 @@ const FormInput = ({ blok, value, fieldChanged }) => {
           id={blok._uid}
           name={blok.name}
           value={value}
+          required
           placeholder={blok.placeholder}
           onChange={(e) => fieldChanged(blok.name, e.target.value)}
         />
@@ -106,6 +108,7 @@ const FormInput = ({ blok, value, fieldChanged }) => {
           id={blok._uid}
           name={blok.name}
           value={value}
+          required
           placeholder={blok.placeholder}
           onChange={(e) => fieldChanged(blok.name, e.target.value)}
         />

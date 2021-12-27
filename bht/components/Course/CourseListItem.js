@@ -1,8 +1,7 @@
 import React from "react";
 import { sbEditable } from "@storyblok/storyblok-editable";
-import DynamicComponent from "./DynamicComponent";
-import styles from "../styles/courseList.module.scss";
-import NavigationLink from "./NavigationLink";
+import styles from "../../styles/courseList.module.scss";
+import NavigationButton from "../NavigationButton";
 import { useSpring, animated } from "react-spring";
 
 const CourseListItem = ({ blok }) => {
@@ -29,7 +28,7 @@ const CourseListItem = ({ blok }) => {
       </animated.div>
       <div style={{ overflowY: "hidden" }}>
         <animated.div style={navProps}>
-          <NavigationLink
+          <NavigationButton
             blok={{
               name: "LÄS MER",
               size: "small",

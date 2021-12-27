@@ -1,6 +1,6 @@
 import { sbEditable } from "@storyblok/storyblok-editable";
-import { Storyblok } from "../lib/storyblok";
-import styles from "../styles/grid.module.scss";
+import { Storyblok } from "../../lib/storyblok";
+import styles from "../../styles/grid.module.scss";
 
 const TextGridColumn = ({ blok }) => {
   function createMarkup(storyblokHTML) {

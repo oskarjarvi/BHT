@@ -1,7 +1,7 @@
 import { sbEditable } from "@storyblok/storyblok-editable";
-import { Storyblok } from "../lib/storyblok";
-import styles from "../styles/textBlock.module.scss";
-import { Wrapper } from "./Wrapper";
+import { Storyblok } from "../../lib/storyblok";
+import styles from "../../styles/textBlock.module.scss";
+import { Wrapper } from "../Wrapper";
 const TextBlock = ({ blok }) => {
   function createMarkup(storyblokHTML) {
     return {

@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
-import styles from "../styles/navLinks.module.scss";
-import useWindowSize from "../utils/hooks";
+import styles from "../../../styles/navLinks.module.scss";
 import { NavLink } from "./NavLink";
 
 export const NavLinks = ({ filteredLinks, links, dropdowns, setMenuClose }) => {
@@ -10,7 +8,12 @@ export const NavLinks = ({ filteredLinks, links, dropdowns, setMenuClose }) => {
     <>
       {filteredLinks.length &&
         filteredLinks.map((item, i) => (
-          <NavLink key={i} href={item.real_path} name={item.name} />
+          <NavLink
+            key={i}
+            href={item.real_path}
+            name={item.name}
+            setMenuClose={setMenuClose}
+          />
         ))}
       {dropdowns.length &&
         dropdowns.map((dropdownItem, index) => (
@@ -24,7 +27,11 @@ export const NavLinks = ({ filteredLinks, links, dropdowns, setMenuClose }) => {
                 .filter((item) => item.parent_id == dropdownItem.id)
                 .map((link, index) => (
                   <li key={index}>
-                    <NavLink href={link.real_path} name={link.name} />
+                    <NavLink
+                      href={link.real_path}
+                      name={link.name}
+                      setMenuClose={setMenuClose}
+                    />
                   </li>
                 ))}
             </ul>

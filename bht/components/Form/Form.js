@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { sbEditable } from "@storyblok/storyblok-editable";
-import styles from "../styles/form.module.scss";
+import styles from "../../styles/form.module.scss";
 import FormInput from "./FormInput";
 import emailjs from "emailjs-com";
-
+import { useRouter } from "next/router";
+import ClipLoader from "react-spinners/ClipLoader";
 const Form = ({ blok }) => {
-  const [values, setValues] = useState({});
+  const router = useRouter();
 
+  const [values, setValues] = useState({});
+  const [loading, setLoading] = useState(false);
   const fieldChanged = (fieldId, value) => {
     setValues((currentValues) => {
       currentValues[fieldId] = value;
@@ -14,14 +17,23 @@ const Form = ({ blok }) => {
     });
   };
   const submitForm = (e) => {
+    setLoading(true);
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_zhi04ue",
-      "template_1oawws5",
-      e.target,
-      "user_CkGezjRimf0X9SUnUERbP"
-    );
+    emailjs
+      .sendForm(
+        "service_zhi04ue",
+        "template_1oawws5",
+        e.target,
+        "user_CkGezjRimf0X9SUnUERbP"
+      )
+      .then(
+        () => router.push("/confirm"),
+        () =>
+          alert(
+            "Något gick fel med intresseanmälan, var god försök igen om en stund"
+          )
+      );
   };
 
   return (
@@ -42,7 +54,7 @@ const Form = ({ blok }) => {
           />
         ))}
         <button type="submit" className={styles.submitButton}>
-          Anmäl
+          {loading ? <ClipLoader /> : "Anmäl"}
         </button>
       </form>
     </div>

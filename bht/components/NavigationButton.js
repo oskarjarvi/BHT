@@ -1,9 +1,9 @@
 import React from "react";
 import { sbEditable } from "@storyblok/storyblok-editable";
 import Link from "next/link";
-import styles from "../styles/navlink.module.scss";
+import styles from "../styles/navButton.module.scss";
 
-const NavigationLink = ({ blok }) => {
+const NavigationButton = ({ blok }) => {
   return (
     <Link href={`/${blok.link.cached_url}`} passHref {...sbEditable(blok)}>
       <div
@@ -17,4 +17,4 @@ const NavigationLink = ({ blok }) => {
   );
 };
 
-export default NavigationLink;
+export default NavigationButton;

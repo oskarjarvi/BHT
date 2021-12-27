@@ -1,11 +1,10 @@
 import React from "react";
 import { sbEditable } from "@storyblok/storyblok-editable";
-import styles from "../styles/text.module.scss";
-import { Storyblok } from "../lib/storyblok";
-import DynamicComponent from "./DynamicComponent";
-import { Wrapper } from "./Wrapper";
-
-const TextColourSection = ({ blok }) => {
+import styles from "../../styles/text.module.scss";
+import { Storyblok } from "../../lib/storyblok";
+import DynamicComponent from "../DynamicComponent";
+import { Wrapper } from "../Wrapper";
+const TextSection = ({ blok }) => {
   function createMarkup(storyblokHTML) {
     return {
       __html: Storyblok.richTextResolver.render(storyblokHTML),
@@ -17,7 +16,7 @@ const TextColourSection = ({ blok }) => {
   };
 
   return (
-    <div {...sbEditable(blok)} className={styles.textColourContainer}>
+    <div {...sbEditable(blok)} className={styles.textContainer}>
       <Wrapper>
         <div className={styles.textWrapper}>
           <pre className={styles.text}>
@@ -34,4 +33,4 @@ const TextColourSection = ({ blok }) => {
   );
 };
 
-export default TextColourSection;
+export default TextSection;

@@ -1,8 +1,8 @@
 import React from "react";
 import { sbEditable } from "@storyblok/storyblok-editable";
-import styles from "../styles/textWithBackground.module.scss";
-import { Storyblok } from "../lib/storyblok";
-import DynamicComponent from "./DynamicComponent";
+import styles from "../../styles/textWithBackground.module.scss";
+import { Storyblok } from "../../lib/storyblok";
+
 import { useSpring, animated } from "react-spring";
 
 const TextWithBackground = ({ blok }) => {

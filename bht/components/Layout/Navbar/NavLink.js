@@ -1,16 +1,17 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "../styles/navLinks.module.scss";
-import useWindowSize from "../utils/hooks";
-import { useState } from "react";
+import styles from "../../../styles/navLinks.module.scss";
 
-export const NavLink = ({ children, href, name, slug }) => {
+import { useState } from "react";
+import useWindowSize from "../../../utils/hooks";
+
+export const NavLink = ({ children, href, name, slug, setMenuClose }) => {
   const router = useRouter();
   const [dropdownVisible, setDropdownVisisble] = useState(false);
   const size = useWindowSize();
 
   const handleOnClick = () => {
-    if (size <= 600) {
+    if (size.width <= 960) {
       setMenuClose();
     }
     setDropdownVisisble(false);
@@ -46,7 +47,7 @@ export const NavLink = ({ children, href, name, slug }) => {
         className={`${styles.navLink} ${
           router.asPath == href ? styles.active : ""
         }`}
-        onClick={() => handleOnClick}
+        onClick={() => handleOnClick()}
       >
         {name}
       </a>

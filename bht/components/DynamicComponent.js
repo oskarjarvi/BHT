@@ -1,37 +1,36 @@
-import TwoColumnSection from "./TwoColumnSection";
+import TwoColumnSection from "./Columns/TwoColumnSection";
 import Page from "./Page";
 import Hero from "./Hero";
-import CourseList from "./Courselist";
-import Course from "./Course";
-import Form from "./Form";
-import FormInput from "./FormInput";
-import NavigationLink from "./NavigationLink";
-import TextColourSection from "./TextColourSection";
-import TextWithBackground from "./TextWithBackground";
-import TextSection from "./TextSection";
+import NavigationButton from "./NavigationButton";
+import CourseList from "./Course/Courselist";
+import Course from "./Course/Course";
+import CourseListItem from "./Course/CourseListItem";
+import Form from "./Form/Form";
+import FormInput from "./Form/FormInput";
+import TextBlock from "./Text/TextBlock";
+import TextSection from "./Text/TextSection";
+import TextColourSection from "./Text/TextColourSection";
+import TextWithBackground from "./Text/TextWithBackground";
+import TextColumn from "./Columns/TextColumn";
+import ImageColumn from "./Columns/ImageColumn";
 import EducationBlock from "./EducationBlock";
 import Grid from "./Grid";
-import TextGridColumn from "./TextGridColumn";
 import ColourSection from "./ColourSection";
-import TextBlock from "./TextBlock";
+import TextGridColumn from "./Text/TextGridColumn";
 import VideoBlock from "./VideoBlock";
-import ImageList from "./ImageList";
-import CourseListItem from "./CourseListItem";
 import Section from "./Section";
-import TextColumn from "./TextColumn";
-import ImageColumn from "./ImageColumn";
+import ImageList from "./ImageList";
 
 // resolve Storyblok components to Next.js components
 const Components = {
   twoColumnSection: TwoColumnSection,
-
   page: Page,
   hero: Hero,
   courselist: CourseList,
   course: Course,
   formSection: Form,
   formInput: FormInput,
-  navigationLink: NavigationLink,
+  navigationLink: NavigationButton,
   textColourSection: TextColourSection,
   textSection: TextSection,
   textWithBackground: TextWithBackground,

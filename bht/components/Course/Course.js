@@ -1,8 +1,8 @@
 import React from "react";
 
 import { sbEditable } from "@storyblok/storyblok-editable";
-import DynamicComponent from "./DynamicComponent";
-import styles from "../styles/course.module.scss";
+import DynamicComponent from "../DynamicComponent";
+import styles from "../../styles/course.module.scss";
 
 const Course = ({ blok }) => {
   return (

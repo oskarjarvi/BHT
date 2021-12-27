@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/navbar.module.scss";
+import styles from "../../../styles/navbar.module.scss";
 import { NavLinks } from "./Navlinks";
 
 export const DesktopNav = ({ filteredLinks, links, dropdowns }) => {
