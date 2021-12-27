@@ -13,7 +13,8 @@
   }
   .textContainer {
     z-index: 200;
-    width: 980px;
+    width: 100%;
+    max-width: 980px;
     height: 253px;
 
     display: flex;
@@ -22,5 +23,8 @@
     align-items: center;
     background-color: white;
     opacity: 0.9;
+  }
+  @media (max-width: 600px) {
+    padding: 30px;
   }
 }

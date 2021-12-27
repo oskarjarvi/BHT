@@ -8,44 +8,44 @@ import { useSpring, animated } from "react-spring";
 import useWindowSize from "../../utils/hooks";
 
 const TwoColumnSection = ({ blok }) => {
-  // const size = useWindowSize();
-  // const [mobileDropDown, setMobileDropDown] = useState({
-  //   title: "",
-  //   imageUrl: "",
-  //   textContent: "",
-  // });
-  // const [openDropDown, setOpenDropDown] = useState(false);
-  // const [contentMaxHeight, setContentMaxHeight] = useState(0);
+  const size = useWindowSize();
+  const [mobileDropDown, setMobileDropDown] = useState({
+    title: "",
+    imageUrl: "",
+    textContent: "",
+  });
+  const [openDropDown, setOpenDropDown] = useState(false);
+  const [contentMaxHeight, setContentMaxHeight] = useState(0);
 
-  // const dropdownProps = useSpring({
-  //   from: { height: 0, opacity: 0.8 },
-  //   to: {
-  //     height: openDropDown ? 500 : 0,
-  //     opacity: openDropDown ? 1 : 0.8,
-  //   },
-  //   config: { duration: 500 },
-  // });
+  const dropdownProps = useSpring({
+    from: { height: 0, opacity: 0.8 },
+    to: {
+      height: openDropDown ? 500 : 0,
+      opacity: openDropDown ? 1 : 0.8,
+    },
+    config: { duration: 500 },
+  });
 
-  // const formatArray = () => {
-  //   if (blok.leftColumn[0].component == "textColumn") {
-  //     setMobileDropDown({
-  //       title: blok.leftColumn[0].columnTitle,
-  //       imageUrl: blok.rightColumn[0].image.filename,
-  //       textContent: blok.leftColumn[0].textContent,
-  //     });
-  //   } else {
-  //     setMobileDropDown({
-  //       title: blok.rightColumn[0].columnTitle,
-  //       imageUrl: blok.leftColumn[0].image.filename,
-  //       textContent: blok.rightColumn[0].textContent,
-  //     });
-  //   }
-  // };
-  // useEffect(() => {
-  //   if (size.width < 600) {
-  //     formatArray();
-  //   }
-  // }, [size]);
+  const formatArray = () => {
+    if (blok.leftColumn[0].component == "textColumn") {
+      setMobileDropDown({
+        title: blok.leftColumn[0].columnTitle,
+        imageUrl: blok.rightColumn[0].image.filename,
+        textContent: blok.leftColumn[0].textContent,
+      });
+    } else {
+      setMobileDropDown({
+        title: blok.rightColumn[0].columnTitle,
+        imageUrl: blok.leftColumn[0].image.filename,
+        textContent: blok.rightColumn[0].textContent,
+      });
+    }
+  };
+  useEffect(() => {
+    if (size.width < 600) {
+      formatArray();
+    }
+  }, [size]);
   function createMarkup(storyblokHTML) {
     return {
       __html: Storyblok.richTextResolver.render(storyblokHTML),
@@ -55,7 +55,7 @@ const TwoColumnSection = ({ blok }) => {
   const RichTextField = ({ data }) => {
     return <div dangerouslySetInnerHTML={createMarkup(data)} />;
   };
-  return (
+  return size.width > 600 ? (
     <div {...sbEditable(blok)} className={styles.gridContainer}>
       <div className={styles.columnContainer}>
         {blok.leftColumn.map((blok) => (
@@ -68,27 +68,27 @@ const TwoColumnSection = ({ blok }) => {
         ))}
       </div>
     </div>
+  ) : (
+    <div className={styles.gridContainer}>
+      <div
+        className={`${styles.toggleContainer}`}
+        onClick={() => setOpenDropDown(!openDropDown)}
+      >
+        <p>{mobileDropDown.title}</p>
+      </div>
+      <animated.div
+        style={{
+          ...dropdownProps,
+          backgroundImage: `url(${mobileDropDown.imageUrl})`,
+        }}
+        className={styles.dropDownContainer}
+      >
+        <div className={styles.textContentContainer}>
+          <RichTextField data={mobileDropDown.textContent} />
+        </div>
+      </animated.div>
+    </div>
   );
-
-  // <div className={styles.gridContainer}>
-  //   <div
-  //     className={`${styles.toggleContainer}`}
-  //     onClick={() => setOpenDropDown(!openDropDown)}
-  //   >
-  //     <p>{mobileDropDown.title}</p>
-  //   </div>
-  //   <animated.div
-  //     style={{
-  //       ...dropdownProps,
-  //       backgroundImage: `url(${mobileDropDown.imageUrl})`,
-  //     }}
-  //     className={styles.dropDownContainer}
-  //   >
-  //     <div className={styles.textContentContainer}>
-  //       <RichTextField data={mobileDropDown.textContent} />
-  //     </div>
-  //   </animated.div>
-  // </div>
 };
 
 export default TwoColumnSection;

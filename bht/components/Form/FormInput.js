@@ -98,7 +98,7 @@ const FormInput = ({ blok, value, fieldChanged }) => {
           id={blok._uid}
           name={blok.name}
           value={value}
-          required
+          required={blok.name == "amountOfDays" ? false : true}
           placeholder={blok.placeholder}
           onChange={(e) => fieldChanged(blok.name, e.target.value)}
         />
