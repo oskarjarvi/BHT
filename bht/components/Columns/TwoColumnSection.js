@@ -20,7 +20,7 @@ const TwoColumnSection = ({ blok }) => {
   const dropdownProps = useSpring({
     from: { height: 0, opacity: 0.8 },
     to: {
-      height: openDropDown ? 500 : 0,
+      height: openDropDown ? 600 : 0,
       opacity: openDropDown ? 1 : 0.8,
     },
     config: { duration: 500 },
