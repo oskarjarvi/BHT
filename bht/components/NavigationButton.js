@@ -5,7 +5,7 @@ import styles from "../styles/navButton.module.scss";
 import { urlObjectKeys } from "next/dist/shared/lib/utils";
 
 const NavigationButton = ({ blok }) => {
-  if (blok.link.url.includes("mailto")) {
+  if (blok.link.url && blok.link.url.includes("mailto")) {
     return (
       <div
         className={blok.size == "small" ? styles.smallNavLink : styles.navLink}
