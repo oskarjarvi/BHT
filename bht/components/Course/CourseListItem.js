@@ -23,8 +23,8 @@ const CourseListItem = ({ blok }) => {
     >
       <animated.div style={textProps} className={styles.courseListText}>
         <h1>{blok.title}</h1>
-        <p>Pris: {blok.price}kr</p>
-        <p>Datum: {blok.date.slice(0, -6)}</p>
+        <h3>Pris: {blok.price}kr</h3>
+        <h3>Datum: {blok.date.slice(0, -6)}</h3>
       </animated.div>
       <div style={{ overflowY: "hidden" }}>
         <animated.div style={navProps}>
