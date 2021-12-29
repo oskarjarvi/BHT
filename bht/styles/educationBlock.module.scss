@@ -7,22 +7,31 @@
   .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     width: 100%;
     max-width: 690px;
-    h2 {
-      text-transform: uppercase;
-    }
-    .certImagesContainer {
-      margin-top: 10px;
+    .content {
       display: flex;
-      justify-content: space-evenly;
-      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        text-transform: uppercase;
+      }
+      pre {
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla */
+        word-wrap: break-word;
+      }
     }
-    pre {
-      white-space: pre-wrap; /* css-3 */
-      white-space: -moz-pre-wrap; /* Mozilla */
-      word-wrap: break-word;
+
+    .certImagesContainer {
+      justify-content: center;
+      margin-top: 10px;
+      display: grid;
+      column-gap: 10px;
+      row-gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 140px));
+      grid-template-rows: repeat(auto-fit, minmax(200px, 250px));
     }
   }
   @media (max-width: 600px) {

@@ -19,7 +19,7 @@ import ColourSection from "./ColourSection";
 import TextGridColumn from "./Text/TextGridColumn";
 import VideoBlock from "./VideoBlock";
 import Section from "./Section";
-import ImageList from "./ImageList";
+import ImageGallery from "./ImageGallery";
 
 // resolve Storyblok components to Next.js components
 const Components = {
@@ -42,9 +42,10 @@ const Components = {
   colourSection: ColourSection,
   textBlock: TextBlock,
   videoBlock: VideoBlock,
-  imageList: ImageList,
+
   courseListItem: CourseListItem,
   section: Section,
+  imageGrid: ImageGallery,
 };
 
 const DynamicComponent = ({ blok }) => {

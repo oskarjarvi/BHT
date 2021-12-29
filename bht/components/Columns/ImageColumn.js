@@ -18,6 +18,7 @@ const ImageColumn = ({ blok }) => {
           src={blok.image.filename}
           alt={"column image"}
           quality={100}
+          priority
         />
       )}
     </div>
