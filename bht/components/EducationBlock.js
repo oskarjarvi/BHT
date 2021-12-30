@@ -20,8 +20,9 @@ const EducationBlock = ({ blok }) => {
           {blok.certImages.length &&
             blok.certImages.map((item, index) => {
               if (item.link.url !== "") {
-                console.log(item);
                 url = item.link.url;
+              } else {
+                url = "";
               }
               return (
                 <Image
