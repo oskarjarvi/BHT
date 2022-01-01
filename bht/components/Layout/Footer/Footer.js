@@ -7,7 +7,7 @@ export default function Footer({ data }) {
     return <></>;
   }
   return (
-    <>
+    <div className={styles.footerWrapper}>
       <div className={styles.footerContainer}>
         <div className={styles.footerLogo}>
           <Image
@@ -30,6 +30,7 @@ export default function Footer({ data }) {
           <pre>{content.openHours}</pre>
         </div>
       </div>
-    </>
+      <p>Hemsidan gjord av Nadja johansson och Oskar Järviniemi</p>
+    </div>
   );
 }
