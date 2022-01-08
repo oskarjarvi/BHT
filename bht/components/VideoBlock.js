@@ -3,7 +3,6 @@ import { Storyblok } from "../lib/storyblok";
 import styles from "../styles/videoBlock.module.scss";
 import { Wrapper } from "./Wrapper";
 const VideoBlock = ({ blok }) => {
-  console.log(blok);
   return (
     <div {...sbEditable(blok)} className={styles.videoContainer}>
       <Wrapper>

@@ -7,7 +7,7 @@ import Modal from "react-modal";
 import DynamicComponent from "./DynamicComponent";
 import styles from "../styles/imageGallery.module.scss";
 import Image from "next/image";
-// import { useSpring, animated } from "react-spring";
+import useWindowSize from "../utils/hooks";
 
 Modal.setAppElement("#__next");
 const customStyles = {
@@ -16,6 +16,7 @@ const customStyles = {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: 600,
+    maxWidth: 600,
     height: 600,
   },
   overlay: {
@@ -23,7 +24,23 @@ const customStyles = {
     backgroundColor: "rgba(70, 70, 70, 0.5)",
   },
 };
+const mobileCustomStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "90vw",
+    height: 600,
+  },
+  overlay: {
+    zIndex: 5000,
+    backgroundColor: "rgba(70, 70, 70, 0.5)",
+  },
+};
+
 const ImageGallery = ({ blok }) => {
+  const size = useWindowSize();
+
   let { title, images } = blok;
   const [imgSrc, setImgSrc] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
@@ -32,11 +49,6 @@ const ImageGallery = ({ blok }) => {
     setImgSrc(target.image.filename);
   };
 
-  // const textProps = useSpring({
-  //   from: { opacity: 0 },
-  //   to: { opacity: 1 },
-  //   config: { duration: 1000 },
-  // });
   return (
     <>
       <div
@@ -70,7 +82,7 @@ const ImageGallery = ({ blok }) => {
       <Modal
         isOpen={modalOpen}
         onRequestClose={() => setModalOpen(false)}
-        style={customStyles}
+        style={size.width > 600 ? customStyles : mobileCustomStyles}
       >
         <div className={styles.modalContent}>
           <Image

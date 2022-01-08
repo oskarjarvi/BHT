@@ -22,17 +22,19 @@ const Form = ({ blok }) => {
 
     emailjs
       .sendForm(
-        "service_zhi04ue",
-        "template_1oawws5",
+        "service_apmw6qs",
+        "template_5qqeshh",
         e.target,
-        "user_CkGezjRimf0X9SUnUERbP"
+        "user_itVWfWZqYk5I9MhLGhkxF"
       )
       .then(
         () => router.push("/confirm"),
-        () =>
+        () => {
+          setLoading(false);
           alert(
             "Något gick fel med intresseanmälan, var god försök igen om en stund"
-          )
+          );
+        }
       );
   };
 

@@ -16,7 +16,7 @@
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(110px, 300px));
     grid-template-columns: 1fr;
-
+    row-gap: 25px;
     .column {
       pre {
         white-space: pre-wrap; /* css-3 */
