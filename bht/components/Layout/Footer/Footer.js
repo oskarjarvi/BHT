@@ -30,7 +30,9 @@ export default function Footer({ data }) {
           <pre>{content.openHours}</pre>
         </div>
       </div>
-      <p>Hemsidan gjord av Nadja johansson och Oskar Järviniemi</p>
+      <p className={styles.madeByText}>
+        Hemsidan gjord av Nadja johansson och Oskar Järviniemi
+      </p>
     </div>
   );
 }
