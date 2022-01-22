@@ -1,13 +1,14 @@
 import React from "react";
-import DynamicComponent from "../components/DynamicComponent";
+import DynamicComponent from "../DynamicComponent";
 import { sbEditable } from "@storyblok/storyblok-editable";
 import Image from "next/image";
-import styles from "../styles/educationBlock.module.scss";
+import styles from "../../styles/educationBlock.module.scss";
 import { useRouter } from "next/router";
+import EducationImage from "./EducationImage";
 
 const EducationBlock = ({ blok }) => {
   const router = useRouter();
-  let url = null;
+
   return (
     <div {...sbEditable(blok)} className={styles.educationsContainer}>
       <div className={styles.container}>
@@ -19,22 +20,7 @@ const EducationBlock = ({ blok }) => {
         <div className={styles.certImagesContainer}>
           {blok.certImages.length &&
             blok.certImages.map((item, index) => {
-              if (item.link.url !== "") {
-                url = item.link.url;
-              } else {
-                url = "";
-              }
-              return (
-                <Image
-                  onClick={() => url && router.push(url)}
-                  key={index}
-                  height={280}
-                  width={200}
-                  src={item.image.filename}
-                  alt={"certification Image"}
-                  quality={100}
-                />
-              );
+              return <EducationImage educationItem={item} key={index} />;
             })}
         </div>
       </div>

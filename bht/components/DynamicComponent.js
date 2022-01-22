@@ -13,7 +13,7 @@ import TextColourSection from "./Text/TextColourSection";
 import TextWithBackground from "./Text/TextWithBackground";
 import TextColumn from "./Columns/TextColumn";
 import ImageColumn from "./Columns/ImageColumn";
-import EducationBlock from "./EducationBlock";
+import EducationBlock from "./Education/EducationBlock";
 import Grid from "./Grid";
 import ColourSection from "./ColourSection";
 import TextGridColumn from "./Text/TextGridColumn";
