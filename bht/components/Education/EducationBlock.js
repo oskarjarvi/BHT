@@ -3,12 +3,10 @@ import DynamicComponent from "../DynamicComponent";
 import { sbEditable } from "@storyblok/storyblok-editable";
 import Image from "next/image";
 import styles from "../../styles/educationBlock.module.scss";
-import { useRouter } from "next/router";
+
 import EducationImage from "./EducationImage";
 
 const EducationBlock = ({ blok }) => {
-  const router = useRouter();
-
   return (
     <div {...sbEditable(blok)} className={styles.educationsContainer}>
       <div className={styles.container}>
