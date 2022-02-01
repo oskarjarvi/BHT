@@ -11,7 +11,7 @@ const EducationImage = ({ educationItem }) => {
       setLinkUrl(educationItem.link.url);
     }
   }, [educationItem]);
-  console.log(educationItem);
+
   return (
     <Image
       onClick={() => linkUrl && router.push(linkUrl)}
