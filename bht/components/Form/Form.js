@@ -22,10 +22,10 @@ const Form = ({ blok }) => {
 
     emailjs
       .sendForm(
-        "service_apmw6qs",
-        "template_5qqeshh",
+        proces.env.SERVICE_ID,
+        proces.env.TEMPLATE_ID,
         e.target,
-        "user_itVWfWZqYk5I9MhLGhkxF"
+        process.env.USER_ID
       )
       .then(
         () => router.push("/confirm"),

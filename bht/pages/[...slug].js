@@ -38,7 +38,7 @@ export async function getStaticProps({ params, preview = false }) {
       story: data ? data.story : null,
       preview,
     },
-    revalidate: 30, // revalidate every hour
+    revalidate: 30,
   };
 }
 
@@ -60,7 +60,7 @@ export async function getStaticPaths() {
     const slug = data.links[linkKey].slug;
 
     // remove the pages part from the slug
-    // let newSlug = slug.replace('kurser', '');
+
     let splittedSlug = slug.split("/");
 
     paths.push({ params: { slug: splittedSlug } });
