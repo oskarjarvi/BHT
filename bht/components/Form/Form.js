@@ -22,8 +22,8 @@ const Form = ({ blok }) => {
 
     emailjs
       .sendForm(
-        proces.env.SERVICE_ID,
-        proces.env.TEMPLATE_ID,
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
         e.target,
         process.env.USER_ID
       )
