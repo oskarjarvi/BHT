@@ -6,12 +6,12 @@ import Storyblok, { useStoryblok } from "../lib/storyblok";
 
 export default function Page({ story, preview }) {
   const enableBridge = true; // load the storyblok bridge everywhere
-  // const enableBridge = preview; // enable bridge only in prevew mode
-  story = useStoryblok(story, enableBridge);
 
+  story = useStoryblok(story, enableBridge);
+ 
   return (
     <div>
-      <DynamicComponent blok={story.content} />
+       <DynamicComponent blok={story.content} />
     </div>
   );
 }
@@ -22,7 +22,8 @@ export async function getStaticProps({ params, preview = false }) {
 
   let sbParams = {
     // change to `published` to load the published version
-    version: "draft", // or published
+    version: "published",
+    cv: Date.now() // or published
   };
 
   if (preview) {
@@ -30,15 +31,16 @@ export async function getStaticProps({ params, preview = false }) {
     sbParams.version = "draft";
     sbParams.cv = Date.now();
   }
-
+  
   let { data } = await Storyblok.get(`cdn/stories/${slug}`, sbParams);
 
+  console.log(data.story)
   return {
     props: {
       story: data ? data.story : null,
       preview,
     },
-    revalidate: 30,
+    revalidate: 5,
   };
 }
 
